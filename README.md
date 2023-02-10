@@ -82,7 +82,7 @@ SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/mkosmo/hassio-addon-postgresql15.svg
 [commits]: https://github.com/mkosmo/hassio-addon-postgresql15/commits/main
@@ -91,11 +91,11 @@ SOFTWARE.
 [mkosmo]: https://github.com/mkosmo
 [github-actions-shield]: https://github.com/mkosmo/hassio-addon-postgresql15/workflows/CI/badge.svg
 [github-actions]: https://github.com/mkosmo/hassio-addon-postgresql15/actions
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/mkosmo/hassio-addon-postgresql15/issues
 [license-shield]: https://img.shields.io/github/license/mkosmo/hassio-addon-postgresql15.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [releases-shield]: https://img.shields.io/github/release/mkosmo/hassio-addon-postgresql15.svg
 [releases]: https://github.com/mkosmo/hassio-addon-postgresql15/releases
 [repository]: https://github.com/mkosmo/hassio-addons
