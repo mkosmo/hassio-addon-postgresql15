@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 RUN apk update
 
-ENV POSTGRES_VERSION 15.1-r0
+ENV POSTGRES_VERSION 15.2-r0
 RUN apk add --no-cache \
     postgresql15=${POSTGRES_VERSION} \
     postgresql15-client=${POSTGRES_VERSION}
