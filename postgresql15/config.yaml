@@ -1,0 +1,50 @@
+---
+version: dev
+slug: postgresql15
+name: PostgreSQL
+description: A SQL database server
+url: https://github.com/mkosmo/hassio-addons-postgresql/tree/master/postgresql
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: system
+tmpfs: true
+map:
+  - share:rw
+timeout: 60
+backup: cold
+codenotary: mkosmo@gmail.com
+init: false
+options:
+  databases:
+    - homeassistant
+  logins:
+    - password: null
+      username: postgres
+    - password: null
+      username: homeassistant
+  rights:
+    - database: homeassistant
+      username: homeassistant
+  max_connections: 20
+ports:
+  5432/tcp: null
+ports_description:
+  5432/tcp: PostgreSQL
+schema:
+  databases:
+    - str
+  logins:
+    - username: str
+      password: password
+  rights:
+    - database: str
+      privileges:
+        - "list(SELECT|INSERT|UPDATE|DELETE|TRUNCATE|REFERENCES|TRIGGER|CREATE|CONNECT\
+          |TEMPORARY|EXECUTE|USAGE|SET)?"
+      username: str
+  max_connections: int(1,)
+watchdog: tcp://[HOST]:[PORT:5432]

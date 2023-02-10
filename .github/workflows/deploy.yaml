@@ -1,0 +1,25 @@
+---
+name: Deploy
+
+# yamllint disable-line rule:truthy
+on:
+  release:
+    types:
+      - published
+  workflow_run:
+    workflows: ["CI"]
+    branches: [master]
+    types:
+      - completed
+
+jobs:
+  workflows:
+    uses: hassio-addons/workflows/.github/workflows/addon-deploy.yaml@main
+    with:
+      slug: hassio-addon-postgresql15
+      repository: hassio-addons
+      repository_edge: hassio-addons-edge
+      repository_beta: hassio-addons-beta
+    secrets:
+      CAS_API_KEY: ${{ secrets.CAS_API_KEY }}
+      DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}

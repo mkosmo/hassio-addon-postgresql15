@@ -1,0 +1,72 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start PostgreSQL service if enabled
+# ==============================================================================
+declare postgres_data
+declare update
+declare postgres_pid
+declare version_file
+
+postgres_data=/data/postgres
+version_file=/data/version
+update=false
+
+if [[ $(< ${version_file}) != $(bashio::addon.version) ]]; then
+	update=true
+fi
+
+bashio::log.info "Starting PostgreSQL..."
+su - postgres -c "postgres -D ${postgres_data}" &
+postgres_pid=$!
+bashio::log.info "done"
+
+while ! psql -U "postgres" postgres -c "" 2> /dev/null; do
+	sleep 1
+done
+
+for database in $(bashio::config "databases"); do
+    bashio::log.info "Create database if not exist: '${database}'"
+	psql -U postgres -tc "SELECT 1 FROM pg_database WHERE datname = '${database}'" | grep -q 1 || psql -U postgres -c "CREATE DATABASE ${database}"
+done
+bashio::log.info "done"
+
+bashio::log.info "Set up users..."
+for login in $(bashio::config "logins|keys"); do
+    USERNAME=$(bashio::config "logins[${login}].username")
+    PASSWORD=$(bashio::config "logins[${login}].password")
+
+    if psql -U "postgres" postgres -c "ALTER USER ${USERNAME} WITH PASSWORD '${PASSWORD}';" 2> /dev/null; then
+        bashio::log.info "Update user ${USERNAME}"
+    else
+        bashio::log.info "Create user ${USERNAME}"
+        psql -U "postgres" postgres -c "CREATE USER ${USERNAME};" 2> /dev/null || true
+		psql -U "postgres" postgres -c "ALTER USER ${USERNAME} WITH PASSWORD '${PASSWORD}';" 2> /dev/null || true
+    fi
+done
+
+bashio::log.info "Grant privileges..."
+for right in $(bashio::config "rights|keys"); do
+    USERNAME=$(bashio::config "rights[${right}].username")
+    DATABASE=$(bashio::config "rights[${right}].database")
+
+    if bashio::config.exists "rights[${right}].privileges"; then
+        PRIVILEGES=$(bashio::config "rights[${right}].privileges")
+        bashio::log.info "Granting ${PRIVILEGES} to ${USERNAME} on ${DATABASE}"
+        psql -U "postgres" postgres -c "REVOKE ALL ON public.${DATABASE} FROM ${USERNAME};" || true
+        psql -U "postgres" postgres -c "GRANT ${PRIVILEGES} ON public.${DATABASE} TO ${USERNAME};" || true
+    else
+        bashio::log.info "Granting all privileges to ${USERNAME} on public.${DATABASE}"
+        psql -U "postgres" postgres -c "GRANT ALL ON public.${DATABASE} TO ${USERNAME};" 2> /dev/null || true
+    fi
+done
+
+rm -f /data/firstrun
+if bashio::var.true "${update}"; then
+	bashio::log.info "Exiting update mode and restarting.."
+	bashio::addon.version > ${version_file}
+	sleep 3
+	bashio::addon.restart
+fi
+
+bashio::log.notice "PostgreSQL is running!"
+wait "${postgres_pid}"

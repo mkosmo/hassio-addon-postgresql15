@@ -1,0 +1,16 @@
+---
+configuration:
+  databases:
+    name: Databases
+    description: Databases to be created and hosted by PostgreSQL
+  logins:
+    name: Logins
+    description: Logins to be created and hosted by PostgreSQL
+  rights:
+    name: Rights
+    description: Rights (grants) to assign to users on databases
+  max_connections:
+    name: Max Connections
+    description: Maximum connections to allow to connect to PostgreSQL
+network:
+  5432/tcp: PostgreSQL Port
