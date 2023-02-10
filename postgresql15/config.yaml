@@ -3,7 +3,8 @@ version: dev
 slug: postgresql15
 name: PostgreSQL 15
 description: A PostgreSQL 15 database server
-url: https://github.com/mkosmo/hassio-addons-postgresql/tree/master/postgresql
+url: >
+  https://github.com/mkosmo/hassio-addon-postgresql15/tree/master/postgresql15
 arch:
   - armhf
   - armv7
