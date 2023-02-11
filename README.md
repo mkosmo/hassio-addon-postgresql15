@@ -100,7 +100,7 @@ SOFTWARE.
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
 [mkosmo]: https://github.com/mkosmo
 [postgresql]: https://www.postgresql.org/
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
+[project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Development-yellowgreen.svg
 [releases-shield]: https://img.shields.io/github/release/mkosmo/hassio-addon-postgresql15.svg
 [releases]: https://github.com/mkosmo/hassio-addon-postgresql15/releases
 [repository]: https://github.com/mkosmo/hassio-addons
