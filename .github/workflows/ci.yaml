@@ -14,14 +14,15 @@ on:
 jobs:
   workflows:
     uses: hassio-addons/workflows/.github/workflows/addon-ci.yaml@main
-  addon-ci-status:
+  status-report:
+    name: Success Report
     runs-on: ubuntu-latest
     needs: workflows
     if: always()
     steps:
-      - name: Successful deploy
+      - name: Success
         if: ${{ !(contains(needs.*.result, 'failure')) }}
         run: exit 0
-      - name: Failing deploy
+      - name: Failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: exit 1
