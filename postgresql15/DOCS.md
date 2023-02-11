@@ -161,7 +161,7 @@ SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon-example]: https://github.com/hassio-addons/addon-example
-[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=PENDING_postgresql15&repository_url=https%3A%2F%2Fgithub.com%2Fmkosmo%2Fhassio-addons
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=f2df798e_postgresql15&repository_url=https%3A%2F%2Fgithub.com%2Fmkosmo%2Fhassio-addons
 [contributors]: https://github.com/mkosmo/hassio-addon-postgresql15/graphs/contributors
 [expaso-pgadmin4]: https://github.com/Expaso/hassos-addon-pgadmin4
 [expaso-repo]: https://github.com/Expaso/hassos-addons
