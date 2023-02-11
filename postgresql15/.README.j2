@@ -26,59 +26,45 @@ reputation for reliability, feature robustness, and performance.
 system that uses and extends the SQL language combined with many features that
 safely store and scale the most complicated data workloads.
 
-## Support
+{% if channel == "edge" %}
+## WARNING! THIS IS AN EDGE VERSION!
 
-Got questions?
+This Home Assistant Add-ons repository contains edge builds of add-ons.
+Edge builds add-ons are based upon the latest development version.
 
-You cann [open an issue here][issue] GitHub.
+- They may not work at all.
+- They might stop working at any time.
+- They could have a negative impact on your system.
 
-## Contributing
+This repository was created for:
 
-This is an active open-source project. We are always open to people who want to
-use the code or contribute to it.
+- Anybody willing to test.
+- Anybody interested in trying out upcoming add-ons or add-on features.
+- Developers.
 
-We have set up a separate document containing our
-[contribution guidelines](.github/CONTRIBUTING.md).
+If you are more interested in stable releases of our add-ons:
 
-Thank you for being involved! :heart_eyes:
+<https://github.com/hassio-addons/repository>
 
-## Authors & contributors
+{% endif %}
+{% if channel == "beta" %}
+## WARNING! THIS IS A BETA VERSION!
 
-The original setup of this repository is by [Matthew Kosmoski][mkosmo].
+This Home Assistant Add-ons repository contains beta releases of add-ons.
 
-For a full list of all authors and contributors,
-check [the contributor's page][contributors].
+- They might stop working at any time.
+- They could have a negative impact on your system.
 
-## We have got some Home Assistant add-ons for you
+This repository was created for:
 
-Want some more functionality to your Home Assistant instance?
+- Anybody willing to test.
+- Anybody interested in trying out upcoming add-ons or add-on features.
 
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
+If you are more interested in stable releases of our add-ons:
 
-## License
+<https://github.com/hassio-addons/repository>
 
-MIT License
-
-Copyright (c) 2023 Matthew Kosmoski
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+{% endif %}
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
