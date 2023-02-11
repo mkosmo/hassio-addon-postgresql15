@@ -45,6 +45,8 @@ Thank you for being involved! :heart_eyes:
 ## Authors & contributors
 
 The original setup of this repository is by [Matthew Kosmoski][mkosmo].
+This respository takes much of its inspiration from the work of
+[Franck Nijhof][frenck] and the [Example Add-on][addon-example].
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -81,6 +83,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[addon-example]: https://github.com/hassio-addons/addon-example
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
@@ -88,6 +91,7 @@ SOFTWARE.
 [commits]: https://github.com/mkosmo/hassio-addon-postgresql15/commits/main
 [contributors]: https://github.com/mkosmo/hassio-addon-postgresql15/graphs/contributors
 [docs]: https://github.com/mkosmo/hassio-addon-postgresql15/blob/master/postgresql15/DOCS.md
+[frenck]: https://github.com/frenck
 [github-actions-shield]: https://github.com/mkosmo/hassio-addon-postgresql15/workflows/CI/badge.svg
 [github-actions]: https://github.com/mkosmo/hassio-addon-postgresql15/actions
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
