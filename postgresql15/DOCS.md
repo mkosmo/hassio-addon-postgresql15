@@ -160,15 +160,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon-example]: https://github.com/hassio-addons/addon-example
 [addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=PENDING_postgresql15&repository_url=https%3A%2F%2Fgithub.com%2Fmkosmo%2Fhassio-addons
 [contributors]: https://github.com/mkosmo/hassio-addon-postgresql15/graphs/contributors
-[mkosmo]: https://github.com/mkosmo
-[issue]: https://github.com/mkosmo/hassio-addon-postgresql15/issues
-[releases]: https://github.com/mkosmo/hassio-addon-postgresql15/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
 [expaso-pgadmin4]: https://github.com/Expaso/hassos-addon-pgadmin4
 [expaso-repo]: https://github.com/Expaso/hassos-addons
 [expaso]: https://github.com/Expaso
-[postgresql]: https://www.postgresql.org/
 [frenck]: https://github.com/frenck
-[addon-example]: https://github.com/hassio-addons/addon-example
+[issue]: https://github.com/mkosmo/hassio-addon-postgresql15/issues
+[mkosmo]: https://github.com/mkosmo
+[postgresql]: https://www.postgresql.org/
+[releases]: https://github.com/mkosmo/hassio-addon-postgresql15/releases
+[semver]: http://semver.org/spec/v2.0.0.htm
