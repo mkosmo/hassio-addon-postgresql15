@@ -67,7 +67,7 @@ delete them when you no longer need a database._
 
 ### Option: `logins`
 
-Specify PostgreSQL users to create and the passwords to assign.  By default,
+Specify PostgreSQL users to create and the passwords to assign. By default,
 `postgres` and `homeassistant` users are populated, but no passwords are
 assigned.
 
@@ -91,18 +91,18 @@ not yet support specific grants._
 ### Option: `max_connections`
 
 Determines the maximum number of concurrent connections to the database server.
-This parameter can only be set at server start.  _Default is 20_.
+This parameter can only be set at server start. _Default is 20_.
 
 ## Troubleshooting issues with Postgres 15
 
-For inspection of the running server, schema, and contents, there are administrative tools available.  User [Expaso][expaso] offers a [pgAdmin 4][expaso-pgadmin4] Home Assistant Add-on in another [repository][expaso-repo].
+For inspection of the running server, schema, and contents, there are administrative tools available. User [Expaso][expaso] offers a [pgAdmin 4][expaso-pgadmin4] Home Assistant Add-on in another [repository][expaso-repo].
 
 ## Known issues and limitations
 
-- This add-on does not automatically drop databases at this time.  If you wish
+- This add-on does not automatically drop databases at this time. If you wish
   to drop a database, you will need to do so manually after deconfiguring
   the database in the add-on.
-- Granualar permissions are not yet supported.  Any user assigned to a
+- Granualar permissions are not yet supported. Any user assigned to a
   database will be granted `ALL PRIVILEGES` on both the database and schema.
 
 ## Changelog & Releases
