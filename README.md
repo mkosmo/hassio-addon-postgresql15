@@ -51,13 +51,6 @@ This respository takes much of its inspiration from the work of
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
-
 ## License
 
 MIT License
@@ -103,4 +96,3 @@ SOFTWARE.
 [project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Development-yellowgreen.svg
 [releases-shield]: https://img.shields.io/github/release/mkosmo/hassio-addon-postgresql15.svg
 [releases]: https://github.com/mkosmo/hassio-addon-postgresql15/releases
-[repository]: https://github.com/mkosmo/hassio-addons
