@@ -8,6 +8,7 @@ RUN apk add --no-cache \
     postgresql15=${POSTGRES_VERSION} \
     postgresql15-client=${POSTGRES_VERSION}
 
+# hadolint ignore=DL3059
 RUN mkdir -p /run/postgresql \
     && mkdir -p /run/postgresql/extensions \
 	&& chown -R postgres:postgres /run/postgresql \
