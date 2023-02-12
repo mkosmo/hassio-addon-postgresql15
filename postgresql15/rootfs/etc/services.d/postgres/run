@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
 # Start PostgreSQL service if enabled
 # ==============================================================================
@@ -13,6 +14,7 @@ update=false
 
 if [[ $(< ${version_file}) != $(bashio::addon.version) ]]; then
 	update=true
+    bashio::log.info "Enabled update mode..."
 fi
 
 bashio::log.info "Starting PostgreSQL..."
@@ -63,7 +65,7 @@ for right in $(bashio::config "rights|keys"); do
             bashio::log.info "Granting all privileges to user ${USERNAME} on database ${DATABASE}"
             psql -U "postgres" postgres -c "GRANT CONNECT ON DATABASE ${DATABASE} TO ${USERNAME};" || true
             psql -U "postgres" postgres -c "GRANT ALL PRIVILEGES ON DATABASE ${DATABASE} TO ${USERNAME};" || true
-            psql -U "postgres" ${DATABASE} -c "GRANT ALL ON SCHEMA public TO ${USERNAME};" || true
+            psql -U "postgres" "${DATABASE}" -c "GRANT ALL ON SCHEMA public TO ${USERNAME};" || true
         fi
     fi
 done
