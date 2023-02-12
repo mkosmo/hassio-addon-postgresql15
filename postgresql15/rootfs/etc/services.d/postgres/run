@@ -14,6 +14,7 @@ update=false
 
 if [[ $(< ${version_file}) != $(bashio::addon.version) ]]; then
 	update=true
+    bashio::log.info "Enabled update mode..."
 fi
 
 bashio::log.info "Starting PostgreSQL..."
