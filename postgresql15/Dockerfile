@@ -4,8 +4,8 @@ FROM $BUILD_FROM
 RUN apk update
 
 RUN apk add --no-cache \
-    postgresql15=15.2-r0 \
-    postgresql15-client=15.2-r0
+    postgresql15=15.2-r4 \
+    postgresql15-client=15.2-r4
 
 # hadolint ignore=DL3059
 RUN mkdir -p /run/postgresql \
