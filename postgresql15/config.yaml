@@ -48,4 +48,8 @@ schema:
           |TEMPORARY|EXECUTE|USAGE|SET)?"
       username: str
   max_connections: int(1,)
-watchdog: tcp://[HOST]:[PORT:5432]
+healthcheck:
+  test: ["CMD-SHELL", "pg_isready"]
+  interval: 10s
+  timeout: 5s
+  retries: 5
