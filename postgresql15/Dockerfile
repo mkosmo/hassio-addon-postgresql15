@@ -1,11 +1,9 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk update
-
-RUN apk add --no-cache \
-    postgresql15=15.3-r0 \
-    postgresql15-client=15.3-r0
+RUN apk update && apk add --no-cache \
+    postgresql15=15.4-r0 \
+    postgresql15-client=15.4-r0
 
 # hadolint ignore=DL3059
 RUN mkdir -p /run/postgresql \
