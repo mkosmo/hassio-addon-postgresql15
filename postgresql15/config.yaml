@@ -48,4 +48,3 @@ schema:
           |TEMPORARY|EXECUTE|USAGE|SET)?"
       username: str
   max_connections: int(1,)
-watchdog: tcp://[HOST]:[PORT:5432]
