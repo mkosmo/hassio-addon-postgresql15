@@ -26,6 +26,10 @@ reputation for reliability, feature robustness, and performance.
 system that uses and extends the SQL language combined with many features that
 safely store and scale the most complicated data workloads.
 
+## Deprecated
+
+As of October 2023, this add-on is deprecated. I would recommend migration to [this](https://github.com/alexbelgium/hassio-addons/tree/master/postgres) alternate which is better maintained.
+
 ## Support
 
 Got questions?
@@ -90,7 +94,7 @@ SOFTWARE.
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/mkosmo/hassio-addon-postgresql15/issues
 [license-shield]: https://img.shields.io/github/license/mkosmo/hassio-addon-postgresql15.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
+[maintenance-shield]: https://img.shields.io/maintenance/no/2023.svg
 [mkosmo]: https://github.com/mkosmo
 [postgresql]: https://www.postgresql.org/
 [project-stage-shield]: https://img.shields.io/badge/Project%20Stage-Development-yellowgreen.svg
